@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-outside-view">
+        <li class="text">Outside View</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-main-entrance">
+        <li class="text">Main Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-reception">
+        <li class="text">Reception</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-director-office">
+        <li class="text">Director Office</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-admin-office">
+        <li class="text">Admin Office</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-staircase">
+        <li class="text">Staircase</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-towards-first-floor">
+        <li class="text">Towards First Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-first-floor">
+        <li class="text">First Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-manager-office-entrance">
+        <li class="text">Manager Office Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-manager-office">
+        <li class="text">Manager Office</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-first-floor-hallway">
+        <li class="text">First Floor Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-edit-suite-entrance">
+        <li class="text">Edit Suite Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-edit-suite">
+        <li class="text">EDit Suite</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-frameflow-1">
+        <li class="text">FrameFlow 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-frameflow-2">
+        <li class="text">FrameFlow 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-frameflow-3">
+        <li class="text">FrameFlow 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-audrium-parlour">
+        <li class="text">Audrium Parlour</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-audrium-voice-booth-1">
+        <li class="text">Audrium Voice Booth 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-voice-booth-2">
+        <li class="text">Voice Booth 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-audrium-sound">
+        <li class="text">Audrium Sound</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-towards-second-floor">
+        <li class="text">Towards Second Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-second-floor">
+        <li class="text">Second Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-blackbox-1">
+        <li class="text">BlackBox 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-blackbox-2">
+        <li class="text">BlackBox 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-blackbox-makeup-room">
+        <li class="text">BlackBox Makeup Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-auditorium-1">
+        <li class="text">Auditorium 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-auditorium-2">
+        <li class="text">Auditorium 2</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
